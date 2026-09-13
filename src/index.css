@@ -10,18 +10,14 @@ html {
 
 body {
   margin: 0;
-
   font-family:
     Inter,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-
-  background: #ffffff;
-
+  background: white;
   color: #101828;
-
   -webkit-font-smoothing: antialiased;
 }
 
