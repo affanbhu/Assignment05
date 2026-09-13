@@ -1,14 +1,14 @@
 import "./Footer.css";
-import logo from "../../assets/logo-text.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+
         {/* Logo and description */}
         <div className="footer-brand">
           <img
-            src={logo}
+            src="/logo-text.png"
             alt="Dev Stack"
             className="footer-logo"
           />
@@ -50,6 +50,7 @@ const Footer = () => {
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>
+
       </div>
 
       {/* Bottom section */}

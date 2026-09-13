@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import TechnologySection from "./components/TechnologySection";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
