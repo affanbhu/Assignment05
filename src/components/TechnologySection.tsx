@@ -152,7 +152,7 @@ function TechnologySection() {
                   <span>+</span>
 
                   <p>
-                    Add technologies to build your stack
+                    Your stack is empty
                   </p>
                 </div>
               ) : (
