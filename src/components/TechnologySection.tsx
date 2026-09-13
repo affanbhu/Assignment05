@@ -50,7 +50,7 @@ const technologies: Technology[] = [
     id: 4,
     name: "Next.js",
     description:
-      "The React framework for full-stack web applications with hybrid static & server rendering.",
+      "The React framework for full-stack web applications with hybrid static and server rendering.",
     category: "Frontend",
     level: "Intermediate",
     rating: 4.9,
@@ -79,13 +79,81 @@ const technologies: Technology[] = [
     badge: "Top SQL",
     icon: "PG",
   },
+  {
+    id: 7,
+    name: "Redis",
+    description:
+      "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    category: "Database",
+    level: "Intermediate",
+    rating: 4.8,
+    badge: "Cache",
+    icon: "▰",
+  },
+  {
+    id: 8,
+    name: "JavaScript",
+    description:
+      "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    category: "Language",
+    level: "Beginner-Friendly",
+    rating: 4.9,
+    badge: "Ubiquitous",
+    icon: "JS",
+  },
+  {
+    id: 9,
+    name: "TypeScript",
+    description:
+      "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    category: "Language",
+    level: "Intermediate",
+    rating: 4.9,
+    badge: "Essential",
+    icon: "TS",
+  },
+  {
+    id: 10,
+    name: "Java",
+    description:
+      "A secure, object-oriented programming language designed for portability and scale.",
+    category: "Language",
+    level: "Intermediate",
+    rating: 4.6,
+    badge: "Robust",
+    icon: "☕",
+  },
+  {
+    id: 11,
+    name: "Tailwind CSS",
+    description:
+      "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    category: "Styling",
+    level: "Beginner-Friendly",
+    rating: 4.9,
+    badge: "Modern",
+    icon: "≈",
+  },
+  {
+    id: 12,
+    name: "Docker",
+    description:
+      "A platform designed to build, share, and run containerized applications reliably.",
+    category: "DevOps",
+    level: "Intermediate",
+    rating: 4.9,
+    badge: "Containers",
+    icon: "◆",
+  },
 ];
 
 function TechnologySection() {
   const [stack, setStack] = useState<Technology[]>([]);
 
   const addToStack = (technology: Technology) => {
-    const alreadyAdded = stack.some((item) => item.id === technology.id);
+    const alreadyAdded = stack.some(
+      (item) => item.id === technology.id
+    );
 
     if (!alreadyAdded) {
       setStack([...stack, technology]);
@@ -104,7 +172,7 @@ function TechnologySection() {
     <section className="technology-section">
       <div className="technology-container">
 
-        {/* Heading */}
+        {/* Section Heading */}
         <div className="technology-heading">
           <h2>
             Explore the <span>Technologies</span>
@@ -115,7 +183,7 @@ function TechnologySection() {
           </p>
         </div>
 
-        {/* Main Content */}
+        {/* Cards + Stack */}
         <div className="technology-layout">
 
           {/* Technology Cards */}
@@ -126,16 +194,22 @@ function TechnologySection() {
               );
 
               return (
-                <div className="technology-card" key={technology.id}>
-
+                <div
+                  className="technology-card"
+                  key={technology.id}
+                >
                   <div className="card-top">
-                    <div className={`tech-icon icon-${technology.id}`}>
+
+                    <div
+                      className={`tech-icon icon-${technology.id}`}
+                    >
                       {technology.icon}
                     </div>
 
                     <span className="tech-badge">
                       {technology.badge}
                     </span>
+
                   </div>
 
                   <h3>{technology.name}</h3>
@@ -146,7 +220,9 @@ function TechnologySection() {
 
                   <div className="tech-info">
                     <span>{technology.category}</span>
+
                     <span>{technology.level}</span>
+
                     <span className="rating">
                       ★ {technology.rating}
                     </span>
@@ -159,9 +235,10 @@ function TechnologySection() {
                     onClick={() => addToStack(technology)}
                     disabled={isSelected}
                   >
-                    {isSelected ? "Added to Stack" : "Add to Stack"}
+                    {isSelected
+                      ? "Added to Stack"
+                      : "Add to Stack"}
                   </button>
-
                 </div>
               );
             })}
@@ -173,7 +250,8 @@ function TechnologySection() {
             <h3>Your Stack</h3>
 
             <p className="stack-count">
-              {stack.length} Technology{stack.length !== 1 ? "s" : ""} Selected
+              {stack.length} Technology
+              {stack.length !== 1 ? "ies" : "y"} Selected
             </p>
 
             <div className="selected-stack">
@@ -181,13 +259,20 @@ function TechnologySection() {
               {stack.length === 0 ? (
                 <div className="empty-stack">
                   <span>+</span>
-                  <p>Add technologies to build your stack</p>
+
+                  <p>
+                    Add technologies to build your stack
+                  </p>
                 </div>
               ) : (
                 stack.map((technology) => (
-                  <div className="selected-item" key={technology.id}>
-
-                    <div className={`small-icon icon-${technology.id}`}>
+                  <div
+                    className="selected-item"
+                    key={technology.id}
+                  >
+                    <div
+                      className={`small-icon icon-${technology.id}`}
+                    >
                       {technology.icon}
                     </div>
 
@@ -198,11 +283,12 @@ function TechnologySection() {
 
                     <button
                       className="remove-button"
-                      onClick={() => removeFromStack(technology.id)}
+                      onClick={() =>
+                        removeFromStack(technology.id)
+                      }
                     >
                       ×
                     </button>
-
                   </div>
                 ))
               )}

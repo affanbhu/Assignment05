@@ -40,7 +40,7 @@
   margin-top: 24px;
 }
 
-/* Cards */
+/* Technology Grid */
 
 .technology-grid {
   display: grid;
@@ -48,12 +48,14 @@
   gap: 12px;
 }
 
+/* Card */
+
 .technology-card {
   padding: 13px;
   min-height: 172px;
   border: 1px solid #edf0f5;
   border-radius: 11px;
-  background: white;
+  background: #fff;
   box-shadow: 0 3px 12px rgba(16, 24, 40, 0.03);
   transition: 0.2s;
 }
@@ -63,6 +65,8 @@
   box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
 }
 
+/* Card Top */
+
 .card-top {
   display: flex;
   align-items: center;
@@ -70,12 +74,12 @@
 }
 
 .tech-icon {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -97,13 +101,45 @@
 
 .icon-5 {
   color: #75c32c;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .icon-6 {
   color: #336791;
   font-size: 11px;
 }
+
+.icon-7 {
+  color: #d82c20;
+  font-size: 13px;
+}
+
+.icon-8 {
+  color: #e8b800;
+  font-size: 10px;
+}
+
+.icon-9 {
+  color: #0875c1;
+  font-size: 10px;
+}
+
+.icon-10 {
+  color: #e31b23;
+  font-size: 15px;
+}
+
+.icon-11 {
+  color: #25b6df;
+  font-size: 20px;
+}
+
+.icon-12 {
+  color: #2496ed;
+  font-size: 14px;
+}
+
+/* Badge */
 
 .tech-badge {
   padding: 3px 7px;
@@ -112,6 +148,8 @@
   color: #16a34a;
   background: #ecfdf3;
 }
+
+/* Card Text */
 
 .technology-card h3 {
   margin: 9px 0 4px;
@@ -127,12 +165,12 @@
   line-height: 1.5;
 }
 
-/* Card information */
+/* Card Info */
 
 .tech-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin: 8px 0;
   color: #667085;
   font-size: 8px;
@@ -146,17 +184,17 @@
 
 .rating {
   color: #344054 !important;
-  background: white !important;
+  background: #fff !important;
 }
 
-/* Add button */
+/* Add Button */
 
 .add-button {
   width: 100%;
   height: 25px;
   border: 0;
   border-radius: 5px;
-  color: white;
+  color: #fff;
   background: #101522;
   font-size: 9px;
   cursor: pointer;
@@ -175,14 +213,14 @@
   cursor: default;
 }
 
-/* Your Stack */
+/* Stack */
 
 .stack-panel {
   min-height: 172px;
   padding: 13px;
   border: 1px solid #edf0f5;
   border-radius: 11px;
-  background: white;
+  background: #fff;
 }
 
 .stack-panel h3 {
@@ -201,6 +239,8 @@
   min-height: 75px;
 }
 
+/* Empty Stack */
+
 .empty-stack {
   text-align: center;
   padding: 12px 4px;
@@ -216,7 +256,7 @@
   font-size: 8px;
 }
 
-/* Selected item */
+/* Selected Technology */
 
 .selected-item {
   display: flex;
@@ -259,7 +299,7 @@
   color: #ef4444;
 }
 
-/* Remove all */
+/* Remove All */
 
 .remove-all {
   width: 100%;
@@ -267,7 +307,7 @@
   margin-top: 10px;
   border: 1px solid #ffb4b4;
   border-radius: 5px;
-  background: white;
+  background: #fff;
   color: #ef4444;
   font-size: 8px;
   cursor: pointer;
