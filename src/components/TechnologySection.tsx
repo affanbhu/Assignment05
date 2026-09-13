@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import "./TechnologySection.css";
 
@@ -15,11 +16,19 @@ type Technology = {
 function TechnologySection() {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
   const [stack, setStack] = useState<Technology[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/technologies.json")
       .then((response) => response.json())
-      .then((data) => setTechnologies(data));
+      .then((data) => {
+        setTechnologies(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching technologies:", error);
+        setLoading(false);
+      });
   }, []);
 
   const addToStack = (technology: Technology) => {
@@ -39,6 +48,20 @@ function TechnologySection() {
   const removeAll = () => {
     setStack([]);
   };
+
+  // Loading state
+  if (loading) {
+    return (
+      <section className="technology-section">
+        <div className="technology-container">
+          <div className="loading">
+            <div className="loading-spinner"></div>
+            <p>Loading technologies...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="technology-section">
