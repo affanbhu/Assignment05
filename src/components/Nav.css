@@ -1,0 +1,90 @@
+.navbar {
+  width: 100%;
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo img {
+  width: 102px;
+  height: auto;
+  display: block;
+}
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 9px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #e6007e;
+}
+
+.nav-links .active {
+  color: #e6007e;
+}
+
+/* Buttons */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sign-in {
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 9px;
+  cursor: pointer;
+  padding: 6px 4px;
+}
+
+.sign-in:hover {
+  color: #e6007e;
+}
+
+.sign-up {
+  border: none;
+  background: #e6007e;
+  color: white;
+  font-size: 9px;
+  font-weight: 500;
+
+  padding: 7px 15px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sign-up:hover {
+  background: #c9006d;
+}
