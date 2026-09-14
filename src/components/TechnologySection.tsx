@@ -46,14 +46,28 @@ const addToStack = (technology: Technology) => {
   toast.success(`${technology.name} added to your stack!`);
 };
   
+const removeFromStack = (id: number) => {
+  const removedTechnology = stack.find(
+    (item) => item.id === id
+  );
 
-  const removeFromStack = (id: number) => {
-    setStack(stack.filter((item) => item.id !== id));
-  };
+  setStack(stack.filter((item) => item.id !== id));
 
+  if (removedTechnology) {
+    toast.info(`${removedTechnology.name} removed from your stack!`);
+  }
+};
+ 
   const removeAll = () => {
-    setStack([]);
-  };
+  if (stack.length === 0) {
+    toast.warning("Your stack is already empty!");
+    return;
+  }
+
+  setStack([]);
+
+  toast.success("All technologies removed from your stack!");
+};
 
   // Loading state
   if (loading) {
