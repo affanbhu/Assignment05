@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./TechnologySection.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type Technology = {
   id: number;
@@ -29,16 +31,21 @@ function TechnologySection() {
         setLoading(false);
       });
   }, []);
+const addToStack = (technology: Technology) => {
+  const alreadyAdded = stack.some(
+    (item) => item.id === technology.id
+  );
 
-  const addToStack = (technology: Technology) => {
-    const alreadyAdded = stack.some(
-      (item) => item.id === technology.id
-    );
+  if (alreadyAdded) {
+    toast.warning(`${technology.name} is already in your stack!`);
+    return;
+  }
 
-    if (!alreadyAdded) {
-      setStack([...stack, technology]);
-    }
-  };
+  setStack([...stack, technology]);
+
+  toast.success(`${technology.name} added to your stack!`);
+};
+  
 
   const removeFromStack = (id: number) => {
     setStack(stack.filter((item) => item.id !== id));
@@ -127,7 +134,7 @@ function TechnologySection() {
                       isSelected ? "selected" : ""
                     }`}
                     onClick={() => addToStack(technology)}
-                    disabled={isSelected}
+                    disabled={false}
                   >
                     {isSelected
                       ? "Added to Stack"
@@ -203,6 +210,12 @@ function TechnologySection() {
 
         </div>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+      />
+
     </section>
   );
 }
