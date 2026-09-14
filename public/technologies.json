@@ -7,7 +7,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Popular",
-    "icon": "⚛"
+    "icon": "/logos/react.svg"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.8,
     "badge": "Versatile",
-    "icon": "V"
+    "icon": "/logos/vue.svg"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Fast",
-    "icon": "S"
+    "icon": "/logos/svelte.svg"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "SSR / Edge",
-    "icon": "N"
+    "icon": "/logos/nextjs.svg"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Standard",
-    "icon": "JS"
+    "icon": "/logos/nodejs.svg"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Top SQL",
-    "icon": "PG"
+    "icon": "/logos/postgresql.svg"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "level": "Intermediate",
     "rating": 4.8,
     "badge": "Cache",
-    "icon": "▰"
+    "icon": "/logos/redis.svg"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Ubiquitous",
-    "icon": "JS"
+    "icon": "/logos/javascript.svg"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Essential",
-    "icon": "TS"
+    "icon": "/logos/typescript.svg"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "level": "Intermediate",
     "rating": 4.6,
     "badge": "Robust",
-    "icon": "☕"
+    "icon": "/logos/java.svg"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "level": "Beginner-Friendly",
     "rating": 4.9,
     "badge": "Modern",
-    "icon": "≈"
+    "icon": "/logos/tailwindcss.svg"
   },
   {
     "id": 12,
@@ -117,6 +117,6 @@
     "level": "Intermediate",
     "rating": 4.9,
     "badge": "Containers",
-    "icon": "◆"
+    "icon": "/logos/docker.svg"
   }
 ]

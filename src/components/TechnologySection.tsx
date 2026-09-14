@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import "./TechnologySection.css";
 
@@ -95,7 +94,10 @@ function TechnologySection() {
                     <div
                       className={`tech-icon icon-${technology.id}`}
                     >
-                      {technology.icon}
+                      <img
+                        src={technology.icon}
+                        alt={technology.name}
+                      />
                     </div>
 
                     <span className="tech-badge">
@@ -164,7 +166,10 @@ function TechnologySection() {
                     <div
                       className={`small-icon icon-${technology.id}`}
                     >
-                      {technology.icon}
+                      <img
+                        src={technology.icon}
+                        alt={technology.name}
+                      />
                     </div>
 
                     <div>

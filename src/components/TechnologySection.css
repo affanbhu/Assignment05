@@ -9,8 +9,6 @@
   margin: auto;
 }
 
-
-
 .technology-heading h2 {
   margin: 0;
   font-size: 38px;
@@ -31,8 +29,6 @@
   font-size: 14px;
 }
 
-
-
 .technology-layout {
   display: grid;
   grid-template-columns: 1fr 170px;
@@ -40,15 +36,11 @@
   margin-top: 24px;
 }
 
-
-
 .technology-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
-
-
 
 .technology-card {
   padding: 13px;
@@ -65,8 +57,6 @@
   box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
 }
 
-
-
 .card-top {
   display: flex;
   align-items: center;
@@ -79,8 +69,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  font-weight: 700;
+}
+
+.tech-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .icon-1 {
@@ -101,45 +95,35 @@
 
 .icon-5 {
   color: #75c32c;
-  font-size: 11px;
 }
 
 .icon-6 {
   color: #336791;
-  font-size: 11px;
 }
 
 .icon-7 {
   color: #d82c20;
-  font-size: 13px;
 }
 
 .icon-8 {
   color: #e8b800;
-  font-size: 10px;
 }
 
 .icon-9 {
   color: #0875c1;
-  font-size: 10px;
 }
 
 .icon-10 {
   color: #e31b23;
-  font-size: 15px;
 }
 
 .icon-11 {
   color: #25b6df;
-  font-size: 20px;
 }
 
 .icon-12 {
   color: #2496ed;
-  font-size: 14px;
 }
-
-
 
 .tech-badge {
   padding: 3px 7px;
@@ -148,8 +132,6 @@
   color: #16a34a;
   background: #ecfdf3;
 }
-
-
 
 .technology-card h3 {
   margin: 9px 0 4px;
@@ -164,8 +146,6 @@
   font-size: 9px;
   line-height: 1.5;
 }
-
-
 
 .tech-info {
   display: flex;
@@ -186,8 +166,6 @@
   color: #344054 !important;
   background: #fff !important;
 }
-
-
 
 .add-button {
   width: 100%;
@@ -213,8 +191,6 @@
   cursor: default;
 }
 
-
-
 .stack-panel {
   min-height: 0;
   height: fit-content;
@@ -224,6 +200,7 @@
   border-radius: 11px;
   background: #fff;
 }
+
 .stack-panel h3 {
   margin: 0;
   font-size: 11px;
@@ -271,9 +248,17 @@
 
 .small-icon {
   width: 20px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.small-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .selected-item strong {

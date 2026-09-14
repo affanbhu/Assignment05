@@ -1,75 +1,110 @@
+
 .navbar {
+
   width: 100%;
+
   height: 64px;
 
   background: #ffffff;
+
   border-bottom: 1px solid #eeeeee;
 
   display: flex;
+
   align-items: center;
 
-  /* Sticky navbar */
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
+
 }
 
 .navbar-container {
+
   width: 100%;
+
   max-width: 760px;
 
   margin: 0 auto;
+
   padding: 0 20px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
 
 /* Logo */
 
 .logo img {
+
   width: 102px;
+
   height: auto;
+
   display: block;
+
 }
 
 /* Navigation links */
 
 .nav-links {
+
   display: flex;
+
   align-items: center;
+
   gap: 26px;
+
 }
 
 .nav-links a {
+
   text-decoration: none;
+
   color: #374151;
 
   font-size: 9px;
+
   font-weight: 400;
 
   transition: color 0.2s ease;
+
 }
 
 .nav-links a:hover {
+
   color: #e6007e;
+
 }
 
 .nav-links .active {
+
   color: #e6007e;
+
 }
 
 /* Buttons */
 
 .nav-buttons {
+
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
 }
 
 .sign-in {
+
   border: none;
+
   background: transparent;
 
   color: #374151;
@@ -77,20 +112,27 @@
   font-size: 9px;
 
   cursor: pointer;
+
   padding: 6px 4px;
+
 }
 
 .sign-in:hover {
+
   color: #e6007e;
+
 }
 
 .sign-up {
+
   border: none;
 
   background: #e6007e;
+
   color: white;
 
   font-size: 9px;
+
   font-weight: 500;
 
   padding: 7px 15px;
@@ -100,8 +142,156 @@
   cursor: pointer;
 
   transition: background 0.2s ease;
+
 }
 
 .sign-up:hover {
+
   background: #c9006d;
+
 }
+
+/* Hamburger */
+
+.hamburger {
+
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  padding: 0;
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .navbar-container {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 15px;
+
+    justify-content: space-between;
+
+  }
+
+  /* Hamburger on LEFT */
+
+  .hamburger {
+
+    display: block;
+
+    order: 1;
+
+    width: 40px;
+
+    text-align: left;
+
+  }
+
+  /* Logo in CENTER */
+
+  .logo {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+  }
+
+  .logo img {
+
+    width: 95px;
+
+  }
+
+  /* Sign In / Sign Up on RIGHT */
+
+  .nav-buttons {
+
+    display: flex;
+
+    order: 3;
+
+    gap: 5px;
+
+    margin-left: auto;
+
+  }
+
+  .sign-in {
+
+    font-size: 9px;
+
+    padding: 5px 3px;
+
+  }
+
+  .sign-up {
+
+    font-size: 8px;
+
+    padding: 6px 10px;
+
+  }
+
+  /* Hide desktop navigation */
+
+  .nav-links {
+
+    display: none;
+
+  }
+
+  /* Mobile menu when hamburger is clicked */
+
+  .nav-links.mobile-open {
+
+    display: flex;
+
+    position: absolute;
+
+    top: 64px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  }
+
+  .nav-links.mobile-open a {
+
+    font-size: 12px;
+
+  }
+
+}
+
